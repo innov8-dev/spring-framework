@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+  build:
+    commands:
+      - mvn package
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mv target/revaboards-1.0-SNAPSHOT.war revaboards-1.0-SNAPSHOT.war
+
+artifacts:
+  files:
+    - .ebextensions/**/*
+    - revaboards-1.0-SNAPSHOT.war
