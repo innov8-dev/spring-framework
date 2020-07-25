@@ -1,0 +1,17 @@
+package dev.innov8.devboards.exceptions;
+
+public class ResourceNotFoundException extends DevboardsException {
+
+    public ResourceNotFoundException() {
+        super(404, "No resource found with provided search criteria!");
+    }
+
+    public ResourceNotFoundException(String msg) {
+        super(404, msg);
+    }
+
+    public ResourceNotFoundException(String msg, Throwable cause) {
+        super(404, msg, cause);
+    }
+
+}
